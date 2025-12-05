@@ -1,9 +1,8 @@
-from textnode import TextNode
+from extract_markdown import extract_markdown_image
 
 def main():
-    text_node = TextNode("Hello world", TextNode.TextType.CODE, "Hello")
-    
-    print(text_node)
+    text = "This is text with a ![rick roll](https://i.imgur.com/aKaOqIh.gif) and ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg)"
+    print(extract_markdown_image(text))
     return 0
     
 main()
